@@ -4,25 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <title>Crystals Collector Game</title>
 </head>
 <body>
     <h1>Crystals Collector!</h1>
 
-    <p>You will be given a random number at the start of the game.</p>
+    <div class="instruction">
 
-    <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+        <p>You will be given a random number at the start of the game.</p>
 
-    <p>You win the game by matchin your total score to random number, you lose the game if your total score goes above the random number.</p>
+        <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
 
-    <p>The value of each crystal is hidden from you until you click on it.</p>
+        <p>You win the game by matchin your total score to random number, you lose the game if your total score goes above the random number.</p>
 
-    <p>Each time when the game starts, the game will change the values of each crystal.</p>
+        <p>The value of each crystal is hidden from you until you click on it.</p>
 
-    <p>Wins: </p>
+        <p>Each time when the game starts, the game will change the values of each crystal.</p>
 
-    <p>Losses: </p>
+    </div>
 
-    <p>Your total score is</p>
+    <div class="container">
+
+            <div id="computerNumber">
+                <h2>Number to Guess: <span class="value"></span></h2>
+            </div>
+
+            <div id="scoreboard">
+
+                <h3>Wins: <span id="win"></span></h3>
+
+                <h3>Losses: <span id="loss"></span></h3>
+
+                <h3>Your total score is <span id="status"></span></h3>
+
+            </div>
+
+            <div id="crystals"></div>
+
+    </div>
+
+    <script type="text/javascript" scr="assets/javascript/game.js"></script>
 </body>
 </html>
