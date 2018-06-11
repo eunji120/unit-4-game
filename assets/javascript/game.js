@@ -14,7 +14,7 @@ $(document).ready(function() {
 
     function newCrystals () {
         var numbers = []
-            whiel(numbers.length < 4) {
+            whiel(numbers.length < 4); {
                 var computerNumber = Math.ceil(Math.random()*12)
                 var found = false;
                 for (var i = 0; i < numbers.length; i++) {
