@@ -39,6 +39,37 @@ $(document).ready(function() {
     function newGame() {
 
         counter = 0;
-        $('')
+        $('#yourScore').text(counter);
+
+        function randomIntFromInterval(min,max) {
+            return Math.floor(Math.random()*(max-min+1)+min);
+        }
+
+        var computerAnswer = randomIntFromInterval(19,120);
+
+        $('.crystalImage').on('click', function() {
+            counter = counter + parseInt($(this).data('num'));
+
+            $('#yourScore').text(counter);
+
+            if (counter == computerAnswer) {
+                $('#status').text('You won!');
+                wins ++;
+                $('#win').text(wins);
+                console.log(wins)
+                $('#crystals').empty();
+                newCrystals();
+                newGame;
+
+            } else if (counter > computerAnswer) {
+                $('#status').text('You lost!')
+                losses ++;
+                $('#loss').text(losses);
+                console.log(losses)
+                $('#crystals').empty();
+                newCrystals();
+                newGame();
+            }
+        });
     }
 });
