@@ -25,6 +25,13 @@ h2 {
     color: white;
 }
 
+.row {
+    padding: 20px;
+    margin: 20px;
+    border: solid 2px white;
+    width: 300px;
+}
+
 h3 {
     font-family: cursive;
     font-size: 20px;
