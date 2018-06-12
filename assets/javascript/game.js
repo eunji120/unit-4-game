@@ -2,6 +2,7 @@ $(document).ready(function() {
 
     crystals = ["../images/red.jpeg", "../images/blue.jpeg", "../images/yellow.png", "../images/green.jpeg"];
 
+    //variables of scoreboard
     var counter = 0;
     var wins = 0;
     var losses = 0;
