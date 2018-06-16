@@ -2,6 +2,8 @@ $(document).ready(function() {
 
     crystals = ["../images/crystals/red.jpeg", "../images/crystals/blue.jpeg", "../images/crystals/yellow.png", "../images/crystals/green.jpeg"];
 
+
+
     //creating variables of scoreboard
     var counter = 0;
     var wins = 0;
@@ -24,7 +26,7 @@ $(document).ready(function() {
         
         var random = Math.floor(Math.random() * 11) + 1;
         
-        var crystal = $("<img>");
+        var crystal = $(crystals);
             crystal.attr({
                 "class": "crystal",
                 "src": crystals[i],
@@ -105,7 +107,7 @@ newGame();
         $('#status').text(counter);
 
         //when clicking any crystal, it should add with the previous result
-        $("#crystalImg").on('click', function () {
+        $(".crystalImg").on('click', function () {
 
             var num = parseInt($(this).attr('data-random'));
             
@@ -115,7 +117,7 @@ newGame();
         })
         
         //adding onto previous number
-        $('.crystals').on('click', function() {
+        $('.crystalImg').on('click', function() {
             counter = counter + parseInt($(this).data('num'));
 
             $('#status').text(counter);
@@ -146,7 +148,7 @@ newGame();
                 console.log(losses)
                 
                 //reset to a new round 
-                $('#crystalImg').empty();
+                $('.crystalImg').empty();
                 newCrystals();
                 newGame();
             }
