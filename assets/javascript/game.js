@@ -1,8 +1,6 @@
 $(document).ready(function() {
 
-    crystals = ["../images/crystals/red.jpeg", "../images/crystals/blue.jpeg", "../images/crystals/yellow.png", "../images/crystals/green.jpeg"];
-
-
+    var crystals = ["../images/crystals/red.jpeg", "../images/crystals/blue.jpeg", "../images/crystals/yellow.png", "../images/crystals/green.jpeg"];
 
     //creating variables of scoreboard
     var counter = 0;
@@ -28,7 +26,7 @@ $(document).ready(function() {
         
         var crystal = $(crystals);
             crystal.attr({
-                "class": "crystal",
+                "class": "crystalImg",
                 "src": crystals[i],
                 "data-random": random
         });
