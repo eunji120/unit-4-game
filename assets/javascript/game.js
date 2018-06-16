@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    crystals = ["../images/red.jpeg", "../images/blue.jpeg", "../images/yellow.png", "../images/green.jpeg"];
+    crystals = ["../images/crystals/red.jpeg", "../images/crystals/blue.jpeg", "../images/crystals/yellow.png", "../images/crystals/green.jpeg"];
 
     //creating variables of scoreboard
     var counter = 0;
@@ -20,7 +20,7 @@ $(document).ready(function() {
     $("#computerNumber").html('Number to Guess: ' + computerNumber);
 
     //4 crystals generating random values between 1 and 12
-    for (var i = 0; i < 4; i++) {
+    for (var i = 0; i < crystals.length; i++) {
         
         var random = Math.floor(Math.random() * 11) + 1;
         
@@ -157,29 +157,29 @@ newGame();
 
 
 
-//randomly generating computerNumber that is between 19 and 120
-computerNumber = Math.floor(Math.random() * 101 ) + 19;
-$("#computerNumber").html('Number to Guess: ' + computerNumber);
+// //randomly generating computerNumber that is between 19 and 120
+// computerNumber = Math.floor(Math.random() * 101 ) + 19;
+// $("#computerNumber").html('Number to Guess: ' + computerNumber);
 
-//4 crystals generating random values between 1 and 12
-for (var i = 0; i < 4; i++) {
+// //4 crystals generating random values between 1 and 12
+// for (var i = 0; i < 4; i++) {
     
-    var random = Math.floor(Math.random() * 11) + 1;
+//     var random = Math.floor(Math.random() * 11) + 1;
     
-    var crystal = $("<img>");
-        crystal.attr({
-            "class": "crystal",
-            "data-random": random
-    });
-        $(".crystals").append(crystal);
-    }
+//     var crystal = $("<img>");
+//         crystal.attr({
+//             "class": "crystal",
+//             "data-random": random
+//     });
+//         $(".crystals").append(crystal);
+//     }
 
-//when clicking any crystal, it should add with the previous result
-$("#crystalImg").on('click', function () {
+// //when clicking any crystal, it should add with the previous result
+// $("#crystalImg").on('click', function () {
 
-    var num = parseInt($(this).attr('data-random'));
+//     var num = parseInt($(this).attr('data-random'));
     
-    var counter = num;
+//     var counter = num;
 
-    console.log(num, '+',  counter);
-})
+//     console.log(num, '+',  counter);
+// })
